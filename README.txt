@@ -1,0 +1,15 @@
+opentrons Notes
+Dylan Dandy <tohtoridandy@outlook.com>
+Modified: 6.14.22
+
+Tutorial? https://docs.opentrons.com/v2/tutorial.html
+
+Protocol library? https://docs.opentrons.com/v2/new_protocol_api.html#protocol-api-reference
+
+Default labware? https://labware.opentrons.com/
+
+Need to create labware? https://labware.opentrons.com/create/
+
+Default hardware? https://docs.opentrons.com/v2/new_modules.html
+
+Examples? https://docs.opentrons.com/v2/new_examples.html

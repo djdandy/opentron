@@ -1,5 +1,0 @@
-#opentrons Notes
-#Dylan Dandy <tohtoridandy@outlook.com>
-#Modified: 6.14.22
-
-#
