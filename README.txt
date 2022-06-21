@@ -22,3 +22,5 @@ Also need pip (need to setup an environment PATH) installed with opentrons insta
 
 Preference is to simulate through python by:
   python -m opentrons.simulate /path/to/protocol
+  
+If needed, I can work on this stuff on Replit
