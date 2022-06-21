@@ -16,3 +16,7 @@ Examples? https://docs.opentrons.com/v2/new_examples.html
 
 !!! IMPORTANT !!!
 Simulation with python (without Jupyter or the Robot) seems to only work with Python <v3.10 as v3.10 removed loop.
+Also need pip (need to setup an environment PATH) installed with opentrons installed as well.
+
+Preference is to simulate through python by:
+  python -m opentrons.simulate /path/to/protocol
