@@ -1,6 +1,6 @@
 opentrons Notes
 Dylan Dandy <tohtoridandy@outlook.com>
-Modified: 6.14.22
+Modified: 6.20.22
 
 Tutorial? https://docs.opentrons.com/v2/tutorial.html
 
@@ -13,3 +13,6 @@ Need to create labware? https://labware.opentrons.com/create/
 Default hardware? https://docs.opentrons.com/v2/new_modules.html
 
 Examples? https://docs.opentrons.com/v2/new_examples.html
+
+!!! IMPORTANT !!!
+Simulation with python (without Jupyter or the Robot) seems to only work with Python <v3.10 as v3.10 removed loop.
