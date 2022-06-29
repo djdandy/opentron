@@ -1,6 +1,6 @@
 opentrons Notes
 Dylan Dandy <tohtoridandy@outlook.com>
-Modified: 6.20.22
+Modified: 6.28.22
 
 Tutorial? https://docs.opentrons.com/v2/tutorial.html
 
@@ -22,5 +22,7 @@ Also need pip (need to setup an environment PATH) installed with opentrons insta
 
 Preference is to simulate through python by:
   python -m opentrons.simulate /path/to/protocol
+  OR
+  py -m opentrons.simulate /path/to/protocol
   
 If needed, I can work on this stuff on Replit
