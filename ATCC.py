@@ -10,18 +10,22 @@ def run(protocol: protocol_api.ProtocolContext):
     tube_rack = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 7)
     p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
 
+#Setting a singular source
     source=tube_rack.wells()[0]
 
+#Getting the singular tip to use for the entire aliquot
     p300.pick_up_tip()
     for i in range(96):
-        destination=plate_1.wells()[i]
-        p300.distribute(200, source, destination, new_tip='never', blow_out=True, blowout_location='source well')
+#Setting a new destination for every iteration, this avoids using a a list within the function (though a list could be used)
+        destination = plate_1.wells()[i]
+        p300.distribute(200, source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
+#Calling a print as a check for success
         print("Plate 1", i)
     for i in range(96):
-        destination=plate_2.wells()[i]
-        p300.distribute(200, source, destination, new_tip='never', blow_out=True, blowout_location='source well')
+        destination = plate_2.wells()[i]
+        p300.distribute(200, source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
         print("Plate 2", i)
     for i in range(8):
-        destination=plate_3.wells()[i]
-        p300.distribute(200, source, destination, new_tip='never', blow_out=True, blowout_location='source well')
+        destination = plate_3.wells()[i]
+        p300.distribute(200, source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
         print("Plate 3", i)
