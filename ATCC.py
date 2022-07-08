@@ -1,6 +1,9 @@
 from opentrons import protocol_api
 
-metadata = {'apiLevel': '2.12'}
+metadata = {'apiLevel': '2.12',
+           'protocolName': 'ATCC Aliquot',
+           'description': '''Aliquoting 200 vials of ATCC with a premade source''',
+           'author': 'Dylan D'}
 
 def run(protocol: protocol_api.ProtocolContext):
     plate_1 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 1)
