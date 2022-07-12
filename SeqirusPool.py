@@ -13,9 +13,17 @@ def run(protocol: protocol_api.ProtocolContext):
     p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
 
 #Setting a singular Destination
-    destination=tube_rack_3.wells()[3]
+    destination=tube_rack_3.wells()[4]
 
-#Getting the singular tip to use for the entire aliquot
-    p300.transfer([1,2,3,4], tube_rack_1.wells()[0,1,2,3],destination, new_tip = 'always')
-    p300.transfer([1,2,3,4], tube_rack_2.wells()[0,1,2,3],destination, new_tip = 'always')
-    p300.transfer([1,2,3,4], tube_rack_3.wells()[0,1,2,3],destination, new_tip = 'always')
+    for i in range(4):
+      amounts=[1,2,3,4]
+      source=tube_rack_1.wells()[i]
+      p300.transfer(amounts[i], source,destination, new_tip = 'always')
+    for i in range(4):
+      amounts=[1,2,3,4]
+      source=tube_rack_2.wells()[i]
+      p300.transfer(amounts[i], source,destination, new_tip = 'always')
+    for i in range(2):
+      amounts=[1,2]
+      source=tube_rack_3.wells()[i]
+      p300.transfer(amounts[i], source,destination, new_tip = 'always')
