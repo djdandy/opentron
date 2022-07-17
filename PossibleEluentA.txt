@@ -1,5 +1,5 @@
-compounds	- weight %
-water	- 79.55862
+compounds - weight %
+water - 79.55862
 acetate, sodium, trihydrate - 14.95615
 phosphoric acid	- 4.03
 triethylamine -	1.38
