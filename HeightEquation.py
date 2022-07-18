@@ -23,6 +23,8 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(len(amounts)):
       destination=tube_rack_2.wells()[i]
       if remain_vol>=1500:
+        # For a 15mL conical above 1.5mL, y=0.006x-8.7638 THIS DOES NOT INCLUDE THE BOTTOM CONE ATM, The cone is 2.3cm tall
+        # For a 50mL conical above 3.3mL, y=0.002x-6.2216 THIS DOES NOT INCLUDE THE BOTTOM CONE ATM, the cone is 1.7cm tall
         pipette.well_bottom_clearance.aspirate = !!!!!HEIGHT FROM VOL CALC!!!!!
         remain_vol=remain_vol-amounts[i]
       else:
