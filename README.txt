@@ -1,6 +1,10 @@
 opentrons Notes
 Dylan Dandy <tohtoridandy@outlook.com>
-Modified: 6.28.22
+Modified: 7.18.22
+
+CURRENT CONICAL HEIGHT EQUATIONS:
+For a 15mL conical above 1.5mL, height[mm]=(0.006[mm/µL]*(remaining_volume[µL])-8.7638[mm])+23[mm]
+For a 50mL conical above 3.3mL, height[mm]=(0.002[mm/µL]*(remaining_volume[µL])-6.2216[mm])+17[mm]
 
 Tutorial? https://docs.opentrons.com/v2/tutorial.html
 
