@@ -15,7 +15,7 @@ def run(protocol: protocol_api.ProtocolContext):
     p300.well_bottom_clearance.dispense = 15
 
     source=tube_rack_1.wells()[0]
-    source_vol=1800
+    source_vol=2500
     remain_vol=source_vol
     amounts=[100, 50, 75, 150]
     
