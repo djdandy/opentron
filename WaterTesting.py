@@ -6,24 +6,42 @@ metadata = {'apiLevel': '2.12',
            'author': 'Dylan D'}
 
 def run(protocol: protocol_api.ProtocolContext):
-    plate_1 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 1)
-    plate_2 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 2)
-    tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 3)
-    tube_rack = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 4)
+    tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 4)
+    tube_rack_1 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 1)
+    plate_1 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 2)
+    plate_2 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 3)
     p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
+    
+    p300.well_bottom_clearance.dispense = 15
 
-#Setting a singular source
-    source=tube_rack.wells()[0]
-
-#Getting the singular tip to use for the entire aliquot
+    source=tube_rack_1.wells()[0]
+    source_vol=1800
+    remain_vol=source_vol
+    amounts=[100, 50, 75, 150]
+    
     p300.pick_up_tip()
-    for i in range(6):
-#Setting a new destination for every iteration, this avoids using a a list within the function (though a list could be used)
-        destination = plate_1.wells()[i]
-        p300.distribute(100, source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-#Calling a print as a check for success
-        print("Plate 1", i)
-    for i in range(3):
-        destination = plate_2.wells()[i]
-        p300.distribute(100, source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-        print("Plate 2", i)
+
+    for i in range(len(amounts)):
+      destination=plate_1.wells()[i]
+      remain_vol=remain_vol-amounts[i]
+      temp_remain_vol=(remain_vol)-170
+      if temp_remain_vol>=1500:
+        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+      else:
+        p300.well_bottom_clearance.aspirate = 7.5
+      p300.distribute(amounts[i], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
+      print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
+    
+    remain_vol=remain_vol
+    amounts=[30, 200, 500]
+    
+    for i in range(len(amounts)):
+      destination=plate_2.wells()[i]
+      remain_vol=remain_vol-amounts[i]
+      temp_remain_vol=(remain_vol)-170
+      if temp_remain_vol>=1500:
+        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+      else:
+        p300.well_bottom_clearance.aspirate = 7.5
+      p300.distribute(amounts[i], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
+      print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")   
