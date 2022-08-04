@@ -15,7 +15,7 @@ def run(protocol: protocol_api.ProtocolContext):
     tube_rack_1 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 1)
     tube_rack_2 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 2)
     tube_rack_3= protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 3)
-    p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
+    p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
     
     p300.well_bottom_clearance.dispense = 15
 
@@ -61,7 +61,7 @@ def run(protocol: protocol_api.ProtocolContext):
     tube_rack_1 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 1)
     tube_rack_2 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 2)
     tube_rack_3 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 3)
-    p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
+    p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
     
     p300.well_bottom_clearance.dispense = 15
 
