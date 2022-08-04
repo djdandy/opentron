@@ -74,7 +74,7 @@ def run(protocol: protocol_api.ProtocolContext):
       amounts=[20, 30, 30, 40]
       remain_vol=remain_vol-amounts[i]
       temp_remain_vol=(remain_vol)-170
-        if temp_remain_vol>=1500:
+      if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
         p300.well_bottom_clearance.aspirate = 7.5
@@ -89,7 +89,7 @@ def run(protocol: protocol_api.ProtocolContext):
       amounts=[30, 40, 50, 60]
       remain_vol=remain_vol-amounts[i]
       temp_remain_vol=(remain_vol)-170
-        if temp_remain_vol>=1500:
+      if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
         p300.well_bottom_clearance.aspirate = 7.5
