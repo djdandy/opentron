@@ -17,7 +17,7 @@ def run(protocol: protocol_api.ProtocolContext):
     source=tube_rack_1.wells()[0]
     source_vol=2500
     remain_vol=source_vol
-    amounts=[100, 50, 75, 150]
+    amounts=[100, 200, 300]
     
     p300.pick_up_tip()
 
@@ -33,7 +33,7 @@ def run(protocol: protocol_api.ProtocolContext):
       print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
     
     remain_vol=remain_vol
-    amounts=[30, 200, 500]
+    amounts=[400, 500, 600]
     
     for i in range(len(amounts)):
       destination=plate_2.wells()[i]
