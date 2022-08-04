@@ -17,7 +17,7 @@ def run(protocol: protocol_api.ProtocolContext):
     plate_9 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 9)
     tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 10)
     tube_rack = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 11)
-    p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
+    p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
 
 #Setting a singular source
     source=tube_rack.wells()[0]
