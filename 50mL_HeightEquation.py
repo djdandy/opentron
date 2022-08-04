@@ -9,7 +9,7 @@ def run(protocol: protocol_api.ProtocolContext):
     tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 4)
     tube_rack_1 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 1)
     tube_rack_2 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 2)
-    p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1])
+    p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
     
     #Setting a default dispense height, this is 15mm from the bottom
     p300.well_bottom_clearance.dispense = 15
