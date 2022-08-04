@@ -7,7 +7,7 @@ def run(protocol: protocol_api.ProtocolContext):
     tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 2)
     tiprack_2 = protocol.load_labware('opentrons_96_tiprack_300ul', 3)
     reservoir = protocol.load_labware('usascientific_12_reservoir_22ml', 4)
-    p300 = protocol.load_instrument('p300_single', 'right', tip_racks=[tiprack_1, tiprack_2])
+    p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1, tiprack_2])
 
     # these uL values were created randomly for this example
     water_volumes = [
