@@ -2,7 +2,7 @@ from opentrons import protocol_api
 
 metadata = {'apiLevel': '2.12',
            'protocolName': 'Seqirus Aliquoting',
-           'description': '''Aliquoting 40 vials of 1nmol solution from a single source''',
+           'description': '''Aliquoting 40 vials of 1nmol (30µL) solution from a single source''',
            'author': 'Dylan D'}
 
 def run(protocol: protocol_api.ProtocolContext):
@@ -28,9 +28,9 @@ def run(protocol: protocol_api.ProtocolContext):
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-      print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[0]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
+      p300.touch_tip()
     
     remain_vol=remain_vol
     amounts=[30]
@@ -42,6 +42,6 @@ def run(protocol: protocol_api.ProtocolContext):
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-      print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[0]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")   
+      p300.touch_tip()
