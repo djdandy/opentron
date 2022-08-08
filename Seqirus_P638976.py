@@ -30,7 +30,6 @@ def run(protocol: protocol_api.ProtocolContext):
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-      p300.touch_tip()
     
     remain_vol=remain_vol
     amounts=[30]
@@ -44,4 +43,3 @@ def run(protocol: protocol_api.ProtocolContext):
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
-      p300.touch_tip()
