@@ -1,7 +1,7 @@
 from opentrons import protocol_api
 
 metadata = {'apiLevel': '2.12',
-           'protocolName': 'Height Adjustment Based on 15mL conicals',
+           'protocolName': 'Height Adjustment Based on 50mL conicals',
            'description': '''Testing Height Adjustment Based on Volumes''',
            'author': 'Dylan D'}
 
@@ -34,7 +34,7 @@ def run(protocol: protocol_api.ProtocolContext):
       #Using the previous (or set) remaining volume, subtract the amount needed for an aliquot and overwrite remaining volume
       remain_vol=remain_vol-amounts[i]
       #Because we are taking extras AND returning our source solution, we need a temp. remaining volume that includes a little extra
-      temp_remain_vol=(remain_vol)-500
+      temp_remain_vol=(remain_vol)-3000
       #Using the temp. remaining volume because that is the height/depth we need to actually have breathing room,
       #we check if it's above the 1.5mL mark to avoid the cone
       if temp_remain_vol>=3300:
@@ -43,7 +43,7 @@ def run(protocol: protocol_api.ProtocolContext):
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         #If we don't meet the requirements for avoiding the cone, just go relatively deep to get enough liquid
-        p300.well_bottom_clearance.aspirate = 5
+        p300.well_bottom_clearance.aspirate = 1.5
       #Finally the transfer can be done, using the amount, source, destination; we set the height/depth while doing calculations
       p300.distribute(amounts[i], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
       #For the sake of my sanity, this prints remaining volume AFTER aliquoting, remaining volume before aliquoting,
