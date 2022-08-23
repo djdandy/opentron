@@ -29,11 +29,11 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(len(amounts)):
       destination=tube_rack_2.wells()[i]
       remain_vol=remain_vol-amounts[i]
-      temp_remain_vol=(remain_vol)-170
+      temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[i], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
       print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
     
@@ -43,11 +43,11 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(len(amounts)):
       destination=tube_rack_3.wells()[i]
       remain_vol=remain_vol-amounts[i]
-      temp_remain_vol=(remain_vol)-170
+      temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[i], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
       print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")   
    
@@ -73,11 +73,11 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=source_vol[i]
       amounts=[20, 30, 30, 40]
       remain_vol=remain_vol-amounts[i]
-      temp_remain_vol=(remain_vol)-170
+      temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.transfer(amounts[i], source, destination, new_tip = 'always')
       print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
 
@@ -88,10 +88,10 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=source_vol[i]
       amounts=[30, 40, 50, 60]
       remain_vol=remain_vol-amounts[i]
-      temp_remain_vol=(remain_vol)-170
+      temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
-        p300.well_bottom_clearance.aspirate = 7.5
+        p300.well_bottom_clearance.aspirate = 1.5
       p300.transfer(amounts[i], source, destination, new_tip = 'always')
       print("After " +str(remain_vol) +"µL ||", "Before " +str(remain_vol+amounts[i]) +"µL ||", "Temp " +str(temp_remain_vol) +"µL ||", "Height " +str(p300.well_bottom_clearance.aspirate) +"mm")
