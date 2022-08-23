@@ -21,8 +21,8 @@ def run(protocol: protocol_api.ProtocolContext):
     
     p300.well_bottom_clearance.dispense = 15
 
-    source=tube_rack_1.wells()[0]
-    source_vol=1400
+    source=tube_rack_1.wells()[6]
+    source_vol=18150
     remain_vol=source_vol
     amounts=[30]
     
@@ -33,7 +33,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -46,7 +46,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -59,7 +59,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -72,7 +72,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -85,7 +85,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -98,7 +98,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -111,7 +111,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -124,7 +124,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -137,7 +137,7 @@ def run(protocol: protocol_api.ProtocolContext):
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-200
       if temp_remain_vol>=1500:
-        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
+        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
