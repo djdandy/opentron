@@ -2,7 +2,7 @@ from opentrons import protocol_api
 
 metadata = {'apiLevel': '2.12',
            'protocolName': 'Seqirus Aliquoting',
-           'description': '''Aliquoting 192 vials of 1nmol/peptide (30µL) solution from a single source''',
+           'description': '''Aliquoting 200 vials of 1nmol/peptide (30µL) solution from a single source''',
            'author': 'Dylan D'}
 
 def run(protocol: protocol_api.ProtocolContext):
