@@ -1,10 +1,14 @@
 opentrons Notes
 Dylan Dandy <tohtoridandy@outlook.com>
-Modified: 7.18.22
+Modified: 8.23.22
 
 CURRENT CONICAL HEIGHT EQUATIONS:
 For a 15mL conical above 1.5mL, height[mm]=(0.006[mm/µL]*(remaining_volume[µL])-8.7638[mm])+23[mm]
+    Temporary removal volume should be around 200µL
 For a 50mL conical above 3.3mL, height[mm]=(0.002[mm/µL]*(remaining_volume[µL])-6.2216[mm])+17[mm]
+    Temporary removal volume should be around 3000µL
+    
+Physically cut a hole into the housing of the circuit board for a direct ethernet connection.
 
 Tutorial? https://docs.opentrons.com/v2/tutorial.html
 
