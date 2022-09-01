@@ -32,7 +32,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_1.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -45,7 +45,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_2.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -58,7 +58,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_3.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -71,7 +71,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_4.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -84,7 +84,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_5.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -97,7 +97,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_6.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -110,7 +110,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_7.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -123,7 +123,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_8.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
@@ -136,7 +136,7 @@ def run(protocol: protocol_api.ProtocolContext):
       destination=plate_9.wells()[i]
       remain_vol=remain_vol-amounts[0]
       temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=1500:
+      if temp_remain_vol>=3300:
         p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
       else:
         p300.well_bottom_clearance.aspirate = 1.5
