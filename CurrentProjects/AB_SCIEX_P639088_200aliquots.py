@@ -1,7 +1,7 @@
 from opentrons import protocol_api
 
 metadata = {'apiLevel': '2.12',
-           'protocolName': 'AB SCIEX Aliquoting',
+           'protocolName': 'AB SCIEX Aliquoting - Part 1',
            'description': '''Aliquoting 200 vials of 50µL peptide pool from a single source''',
            'author': 'Dylan D'}
 
