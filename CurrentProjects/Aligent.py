@@ -13,6 +13,14 @@ def run(protocol: protocol_api.ProtocolContext):
     
     p300.pick_up_tip()
 
-    for i in [0,14,25,34,42,53]:
-      destination=plate_1.wells()[i]
-      p300.move_to(destination)
+    p300.move_to(plate_1['A1'].top())
+    
+    p300.move_to(plate_1['C3'].top())
+           
+    p300.move_to(plate_1['B5'].top())
+
+    p300.move_to(plate_1['E6'].top())
+         
+    p300.move_to(plate_1['A8'].top())
+           
+    p300.move_to(plate_1['F9'].top())
