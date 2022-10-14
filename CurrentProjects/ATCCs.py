@@ -24,9 +24,9 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(54):
       destination=plate_1.wells()[i]
       remain_vol=remain_vol-amounts[0]
-      temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=3300:
-        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
+      temp_remain_vol=(remain_vol)-200
+      if temp_remain_vol>=1500:
+        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
@@ -37,9 +37,9 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(46):
       destination=plate_2.wells()[i]
       remain_vol=remain_vol-amounts[0]
-      temp_remain_vol=(remain_vol)-3000
-      if temp_remain_vol>=3300:
-        p300.well_bottom_clearance.aspirate = (0.002*(temp_remain_vol)-6.2216)+17
+      temp_remain_vol=(remain_vol)-200
+      if temp_remain_vol>=1500:
+        p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
         p300.well_bottom_clearance.aspirate = 1.5
       p300.distribute(amounts[0], source, destination, new_tip = 'never', blow_out = True, blowout_location = 'source well')
