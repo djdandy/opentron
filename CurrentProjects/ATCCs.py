@@ -24,7 +24,7 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(54):
       destination=plate_1.wells()[i]
       remain_vol=remain_vol-amounts[0]
-      temp_remain_vol=(remain_vol)-200
+      temp_remain_vol=(remain_vol)-400
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
@@ -37,7 +37,7 @@ def run(protocol: protocol_api.ProtocolContext):
     for i in range(46):
       destination=plate_2.wells()[i]
       remain_vol=remain_vol-amounts[0]
-      temp_remain_vol=(remain_vol)-200
+      temp_remain_vol=(remain_vol)-400
       if temp_remain_vol>=1500:
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
