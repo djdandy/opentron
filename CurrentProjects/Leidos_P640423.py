@@ -27,7 +27,7 @@ def run(protocol: protocol_api.ProtocolContext):
         p300.well_bottom_clearance.aspirate = (0.006*(temp_remain_vol)-8.7638)+23
       else:
         p300.well_bottom_clearance.aspirate = 1.5
-      p300.transfer(amounts[0], source[i], destination, new_tip = 'never')
+      p300.distribute(amounts[0], source[i], destination, new_tip = 'never')
       p300.air_gap(30)
       p300.blow_out(source[i])
       p300.drop_tip()
