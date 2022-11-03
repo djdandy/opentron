@@ -31,7 +31,7 @@ def run(protocol: protocol_api.ProtocolContext):
         p300.well_bottom_clearance.aspirate = 1.5
       p300.aspirate(amounts[0], source)
       p300.dispense(amounts[0], destination)
-      p300.airgap(30)
+      p300.air_gap(30)
       p300.blow_out(source)
       
     p300.drop_tip()
