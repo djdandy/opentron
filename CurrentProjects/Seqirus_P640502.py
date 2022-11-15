@@ -12,12 +12,12 @@ def run(protocol: protocol_api.ProtocolContext):
     plate_2 = protocol.load_labware('opentrons_24_tuberack_nest_1.5ml_screwcap', 3)
     p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
     
-    p300.well_bottom_clearance.dispense = 50
+    p300.well_bottom_clearance.dispense = 30
 
     source=tube_rack_1.wells()[3]
-    source_vol=5000
+    source_vol=3500
     remain_vol=source_vol
-    amounts=[1173.9862]
+    amounts=[1153.941953]
     
     p300.pick_up_tip()
 
@@ -33,9 +33,9 @@ def run(protocol: protocol_api.ProtocolContext):
     p300.drop_tip()
     
     source=tube_rack_1.wells()[0]
-    source_vol=5500
+    source_vol=3500
     remain_vol=source_vol
-    amounts=[89.6414343]
+    amounts=[91.6496945]
     
     p300.pick_up_tip()
 
@@ -51,9 +51,9 @@ def run(protocol: protocol_api.ProtocolContext):
     p300.drop_tip()
     
     source=tube_rack_1.wells()[1]
-    source_vol=2000
+    source_vol=3000
     remain_vol=source_vol
-    amounts=[86.3723608]
+    amounts=[104.4083527]
     
     p300.pick_up_tip()
 
@@ -73,10 +73,11 @@ def run(protocol: protocol_api.ProtocolContext):
     remain_vol=source_vol
     amounts=[30]
     
-    p300.pick_up_tip()
-    p300.mix(3, 250, source)
-           
     p300.well_bottom_clearance.dispense = 15
+    p300.well_bottom_clearance.aspirate = 1.5
+
+    p300.pick_up_tip()
+    p300.mix(5, 250, source)           
 
     for i in range(24):
       destination=plate_1.wells()[i]
