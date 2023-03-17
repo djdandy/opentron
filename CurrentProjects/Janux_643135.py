@@ -21,7 +21,7 @@ def run(protocol: protocol_api.ProtocolContext):
     source=tube_rack_1.wells()[0]
     source_vol=10500
     remain_vol=source_vol
-    amounts=[100]
+    amounts=[40]
     
     p300.pick_up_tip()
 
