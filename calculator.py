@@ -1,6 +1,6 @@
 import math
 
-print('Is the source a... \n a) 15mL conical \n b) 50mL conical')
+print('Is the source a... \n a) 15 mL conical \n b) 50 mL conical')
 choice=input()
 if choice=='a':
     print('What is the volume (µL) of the source?')
@@ -22,7 +22,7 @@ elif choice=='b':
     ali_vol=float(input())
     print('How many aliquots?')
     ali_num=float(input())
-    remain=(source-ali_vol*ali_num)-400
+    remain=(source-ali_vol*ali_num)-3000
     if remain>=3300:
         depth=math.floor((0.002*(remain)-6.2216)+17)
         print('Set aspiration tip position to '+str(depth)+' mm')
