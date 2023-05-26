@@ -1,14 +1,19 @@
 from opentrons import protocol_api
 
 metadata = {'apiLevel': '2.12',
-           'protocolName': 'Janux Aliquoting',
-           'description': '''Aliquoting 300 vials of solution from a single source''',
-           'author': 'Dylan D'}
+           'protocolName': 'Matchpoint Aliquotting',
+           'description': '''Aliquoting Array plates from multiple sources''',
+           'author': 'Dylan D + Kristo'}
 
 def run(protocol: protocol_api.ProtocolContext):
-    tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 4)
+    tiprack_1 = protocol.load_labware('opentrons_96_tiprack_300ul', 2)
     tube_rack_1 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 1)
-    plate_1 = protocol.load_labware('agilent_54_tuberack_2000ul', 2)
+    tube_rack_2 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 4)
+    tube_rack_3 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 7)
+    tube_rack_4 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 10)
+    tube_rack_5 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 11)
+    tube_rack_6 = protocol.load_labware('opentrons_10_tuberack_falcon_4x50ml_6x15ml_conical', 8)
+    plate_1 = protocol.load_labware('agilent_54_tuberack_2000ul', 6)
     plate_2 = protocol.load_labware('agilent_54_tuberack_2000ul', 3)
     p300 = protocol.load_instrument('p300_single', 'left', tip_racks=[tiprack_1])
     
