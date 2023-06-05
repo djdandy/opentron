@@ -1,7 +1,0 @@
-compounds - weight %
-water - 79.55862
-acetate, sodium, trihydrate - 14.95615
-phosphoric acid	- 4.03
-triethylamine -	1.38
-sodium azide - 0.078551
-ethylenediaminetetraacetic acid - 0.000786
